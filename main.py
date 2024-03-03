@@ -2,6 +2,8 @@ import pandas as pd
 import sqlite3
 import streamlit as st
 
+st.set_page_config(layout="wide")
+
 con = sqlite3.connect("data/tutorial.db")
 attributable = pd.read_sql('select * from attributable', con=con)
 preventable = pd.read_sql('select * from preventable', con=con)
