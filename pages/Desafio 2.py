@@ -17,9 +17,14 @@ attributable['famele'] = attributable['paf_obs_f'] * 100
 attributable['both'] = attributable['paf_obs_both'] * 100
 
 #histograma
-fig = px.histogram(attributable, x=['male', 'famele'], labels={'pop':'population of Canada'}, title='Histograma da distribuição da porcentagem geral das relaçãoes com cancer')
+fig = px.histogram(attributable, x=['male', 'famele'], title='Histograma da distribuição da porcentagem geral das relaçãoes com cancer')
 fig.update_layout(bargap=0.1,
     yaxis=dict(
+        title='Qtd',
+        titlefont_size=16,
+        tickfont_size=14,
+),
+xaxis=dict(
         title='Porcentagem (%)',
         titlefont_size=16,
         tickfont_size=14,
