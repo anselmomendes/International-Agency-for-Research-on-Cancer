@@ -34,7 +34,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 #media por continente
 attributable_mean = attributable[['continent', 'male', 'famele', 'both']].groupby(['continent']).mean().reset_index()
-fig = px.bar(attributable_mean, x='continent', y=['male', 'famele'], barmode="group", title='Porcentagem média geral da relação por tipo de cancer')
+fig = px.bar(attributable_mean, x='continent', y=['male', 'famele'], barmode="group", title='Porcentagem média geral da relação por continente')
 fig.update_layout(bargap=0.1,
     yaxis=dict(
         title='Porcentagem (%)',
