@@ -83,3 +83,11 @@ Lista dos gráficos elaborados
 - <a href="https://raw.githubusercontent.com/anselmomendes/desafio_ffm/master/imagens/10.png">Top 10 maiores impacto na redução do cancer se os indices de IMC tivessem sido mantidos por tipo de cancer.</a>
 - <a href="https://raw.githubusercontent.com/anselmomendes/desafio_ffm/master/imagens/11.png">Top 10 maiores impacto na redução do cancer se os indices de IMC tivessem sido mantidos por continentes.</a>
 - <a href="https://raw.githubusercontent.com/anselmomendes/desafio_ffm/master/imagens/12.png">Histograma da distribuição da porcentagem reduzida do índice de cancer</a>
+
+##### O resultado da saída do estudo se deu em comparar os dados do item 3 com os paises das americas com a media mundial.
+
+![https://github.com/anselmomendes/desafio_ffm/blob/master/imagens/v01.gif](https://github.com/anselmomendes/desafio_ffm/blob/master/imagens/17.png)
+
+- Com esses gráfico abaixo podemos inferir que os casos de cancer na America do Sul está acima da média mundial em relação a todos os tipos de cancer
+- O impacto se mantivessemos os indices de IMC seria maior na America do Sul que em relação a média mundial.
+
