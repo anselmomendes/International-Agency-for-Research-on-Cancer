@@ -1,8 +1,8 @@
 # Desafio FFM
 
-Nesse projeto foi elaborado uma solução end-to-end passando desde a etapa de scrapy e captura dos dados até a visualização dos dados. Foi feitu a captura e o tratamento das informações e estruturação no banco de dados. A etapa de agrupamento dos dados para construção dos gráficos foram bem importantes para o entendimento dos dados e apresentação dos insight.
+Nesse projeto, foi elaborada uma solução end-to-end, abrangendo desde a etapa de scrapy e captura dos dados até a visualização final. Realizou-se a captura e o tratamento das informações, seguido pela estruturação no banco de dados. A etapa de agrupamento dos dados para a construção dos gráficos foi crucial para a compreensão e apresentação de insights.
 
-A ultima etapa e principal analisou o impacto da relação dos dados de IMC x Cancer e Potencial de Prevenção. Esse tipo de trabalho é muito importante para direcionar tomadas de decisão e eficiencia dos gestores e governantes. O projeto poderia evoluir para um servidor público com dashbaords com os filtros e gráficos de mapas em uma segunda versão. 
+A última e principal etapa analisou o impacto da relação entre os dados de IMC e câncer, bem como o Potencial de Prevenção. Esse tipo de trabalho é fundamental para orientar tomadas de decisão e a eficiência dos gestores e governantes. O projeto poderia evoluir para um servidor público com dashboards contendo filtros e gráficos de mapas em uma segunda versão.
 
 ##### Criação de um repositório no GIT
 
@@ -10,7 +10,7 @@ A ultima etapa e principal analisou o impacto da relação dos dados de IMC x Ca
 git init
 git add .
 git commit -m 'criação do projeto'
-git remote add origin git@github.com:anselmomendes/desafio_ffm.git
+git remote add origin git@github.com:anselmomendes/International-Agency-for-Research-on-Cancer.git
 ~~~
 
 ###### Foi implementado um banco de dados SQLite para estruturar os dados
@@ -88,6 +88,6 @@ Lista dos gráficos elaborados
 
 ![https://github.com/anselmomendes/desafio_ffm/blob/master/imagens/v01.gif](https://github.com/anselmomendes/desafio_ffm/blob/master/imagens/17.png)
 
-- Com esses gráfico abaixo podemos inferir que os casos de cancer na America do Sul está acima da média mundial em relação a todos os tipos de cancer
-- O impacto se mantivessemos os indices de IMC seria maior na America do Sul que em relação a média mundial.
+- Com os gráficos abaixo, podemos inferir que os casos de câncer na América do Sul estão acima da média mundial em relação a todos os tipos de câncer.
+- O impacto, caso mantivéssemos os índices de IMC, seria maior na América do Sul do que em relação à média mundial.
 
