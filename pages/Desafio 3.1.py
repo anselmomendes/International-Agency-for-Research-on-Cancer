@@ -13,6 +13,7 @@ script = '''
 select a.continent,
 a.cancer,
 a.country,
+a.region,
 a.paf_obs_m as male_att,
 a.paf_obs_f as famele_att,
 a.paf_obs_both as both_att,
@@ -63,7 +64,7 @@ st.plotly_chart(fig, use_container_width=True)
 # [America x Media Mundial] Percentual da relação entre IMC e os tipos de cancer por tipo de cancer.
 aux = join[['cancer', 'both_att']].groupby(['cancer']).mean()
 aux = aux.sort_values(by=['both_att'], ascending=False).reset_index()
-aux1 = pd.DataFrame(data=join[join['continent'] == 'Americas region'][['cancer', 'both_att']].groupby(['cancer']).mean())
+aux1 = pd.DataFrame(data=join[join['region'] == 'Latin America & Caribbean'][['cancer', 'both_att']].groupby(['cancer']).mean())
 aux1 = aux1.rename(columns={'both_att': 'both_att_ameriacan_south'})
 aux = pd.merge(aux, aux1, on='cancer', how='left')
 
@@ -81,7 +82,7 @@ st.plotly_chart(fig, use_container_width=True)
 # [America x Media Mundial] percentual de casos de cancer que poderiam ser reduzidos se os niveis de IMC tivessem se mantidos.'
 aux = join[['cancer', 'reduction_both']].groupby(['cancer']).mean()
 aux = aux.sort_values(by=['reduction_both'], ascending=False).reset_index()
-aux1 = pd.DataFrame(data=join[join['continent'] == 'Americas region'][['cancer', 'reduction_both']].groupby(['cancer']).mean())
+aux1 = pd.DataFrame(data=join[join['region'] == 'Latin America & Caribbean'][['cancer', 'reduction_both']].groupby(['cancer']).mean())
 aux1 = aux1.rename(columns={'reduction_both': 'reduction_both_ameriacan_south'})
 aux = pd.merge(aux, aux1, on='cancer', how='left')
 
