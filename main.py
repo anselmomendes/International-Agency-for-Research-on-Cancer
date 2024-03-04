@@ -8,11 +8,7 @@ con = sqlite3.connect("data/tutorial.db")
 attributable = pd.read_sql('select * from attributable', con=con)
 preventable = pd.read_sql('select * from preventable', con=con)
 
-st.markdown('''### __CASE 1:__
-
-Case para Seleção de Especialista em dados - Análise da Fração de Casos de Câncer Atribuíveis ao Índice de Massa Corporal (IMC) em 2012 na América do Sul.)
-
-##### __Introdução:__
+st.markdown('''##### __Introdução:__
 
 Você foi contratado para liderar uma análise que visa entender a fração de casos de câncer em 2012 atribuíveis ao excesso de Índice de Massa Corporal (IMC) em países da América do Sul. O objetivo é comparar essa fração entre os diferentes países da região.
 
