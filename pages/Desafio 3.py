@@ -142,6 +142,7 @@ fig.update_layout(bargap=0.1,
 ))
 st.plotly_chart(fig, use_container_width=True)
 
+join = join.sort_values(by=['both_diff'], ascending=False)
 
 st.write(join)
 

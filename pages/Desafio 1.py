@@ -49,6 +49,7 @@ if option3 is not None:
 
 attributable = attributable[['country', 'continent', 'cancer', 'Attributable fraction M', 'Attributable fraction F', 'Attributable fraction B']]   
 
+attributable = attributable.sort_values(by=['Attributable fraction B'], ascending=False)
 
 st.write(attributable)
 
