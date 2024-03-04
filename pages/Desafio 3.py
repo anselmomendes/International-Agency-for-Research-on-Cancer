@@ -31,6 +31,39 @@ join = pd.read_sql(script, con=con)
 
 st.markdown('### Faça uma comparação entre o cenário fração de casos de câncer em 2012 atribuíveis ao excesso de Índice de Massa Corporal (IMC) em países da América do Sul com o cenário previnível.')
 
+#filtros
+#filtros
+col1, col2, col3 = st.columns(3)
+
+with col1:
+ option1 = st.selectbox(
+   "Continent",
+   (join.continent.unique()),
+   index=None,
+   placeholder="Select continent...",
+)
+if option1 is not None:
+    join = join[join['continent'] == option1]
+
+with col2:
+ option2 = st.selectbox(
+   "Country",
+   (join.country.unique()),
+   index=None,
+   placeholder="Select Country...",
+)
+if option2 is not None:
+    join = join[join['country'] == option2]
+
+with col3:
+ option3 = st.selectbox(
+   "Cancer",
+   (join.cancer.unique()),
+   index=None,
+   placeholder="Select Cancer...",
+)
+if option3 is not None:
+    join = join[join['cancer'] == option3]
 
 join['male_att'] = join['male_att'] * 100
 join['famele_att'] = join['famele_att'] * 100

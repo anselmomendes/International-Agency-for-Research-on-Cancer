@@ -16,6 +16,41 @@ attributable['male'] = attributable['paf_obs_m'] * 100
 attributable['famele'] = attributable['paf_obs_f'] * 100
 attributable['both'] = attributable['paf_obs_both'] * 100
 
+#filtros
+col1, col2, col3 = st.columns(3)
+
+with col1:
+ option1 = st.selectbox(
+   "Continent",
+   (attributable.continent.unique()),
+   index=None,
+   placeholder="Select continent...",
+)
+if option1 is not None:
+    attributable = attributable[attributable['continent'] == option1]
+
+with col2:
+ option2 = st.selectbox(
+   "Country",
+   (attributable.country.unique()),
+   index=None,
+   placeholder="Select Country...",
+)
+if option2 is not None:
+    attributable = attributable[attributable['country'] == option2]
+
+with col3:
+ option3 = st.selectbox(
+   "Cancer",
+   (attributable.cancer.unique()),
+   index=None,
+   placeholder="Select Cancer...",
+)
+if option3 is not None:
+    attributable = attributable[attributable['cancer'] == option3]
+
+
+
 #histograma
 fig = px.histogram(attributable, x=['male', 'famele'], title='Histograma da distribuição da porcentagem geral das relaçãoes com cancer')
 fig.update_layout(bargap=0.1,
